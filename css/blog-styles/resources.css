@@ -1,0 +1,33 @@
+.resourcesHeader {
+    font-family: "Bebas Neue", cursive;
+    text-align: center;
+    color: var(--davys-grey);
+    font-size: 7rem;
+    margin-top: 5vh;
+    margin-bottom: 8vh;
+
+}
+
+.resourcesIcon {
+    font-size: 4em;
+    margin-bottom: 1em;
+}
+
+.resourcesList {
+    padding: 1em;
+    border-radius: 10px;
+    width: 30%;
+    text-align: center;
+}
+
+.resourcesList ul{
+    padding: 0;
+    list-style: none;
+}
+
+.resourcesList ul li{
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    list-style: none;
+    font-size: 1.5rem;
+}

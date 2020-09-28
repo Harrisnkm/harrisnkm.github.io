@@ -1,0 +1,14 @@
+/* Heading Font*/
+@import url('https://fonts.googleapis.com/css?family=Bebas+Neue&display=swap');
+
+/* Text Fonts */
+@import url('https://fonts.googleapis.com/css?family=Lora&display=swap');
+
+/* Globals */
+@import "blog-styles/themes.css";
+
+/*Style Sheets */
+@import "blog-styles/navbar.css";
+@import "blog-styles/index.css";
+@import "blog-styles/about.css";
+@import "blog-styles/resources.css";

@@ -1,0 +1,28 @@
+.aboutSection {
+    height: 70vh;
+    width: 100%;
+    text-align: center;
+
+}
+
+.aboutText{
+    margin-top: 4vh;
+    width: 100%;
+    text-align: center;
+
+}
+
+.aboutText p {
+    width: 55%;
+    margin: 2rem auto;
+}
+
+.aboutText{
+    text-align: center;
+}
+
+.profileImage {
+    margin-top: 10vh;
+    position: relative;
+    border: 10px solid var(--grey-black);
+}

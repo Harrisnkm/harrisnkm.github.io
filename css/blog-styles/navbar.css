@@ -1,0 +1,36 @@
+.navbar {
+    height: auto;
+    padding: 1rem;
+}
+
+.navbar-brand {
+    font-family: 'Bebas Neue', cursive;
+    font-size: 2.5em;
+    font-weight: bold;
+    margin-left: 1rem;
+}
+
+.navbar-links a{
+    color: var(--grey-black);
+    text-decoration: none;
+    font-size: 1.3em;
+    font-weight: 450;
+    font-family: 'Bebas Neue', cursive;
+}
+
+
+.hit-search {
+    margin-right: 1rem;
+}
+
+.hit-search > .btn{
+    margin-left: 1rem;
+    background-color: var(--grey-black);
+    color: white;
+}
+
+.hit-search > .btn:hover{
+    margin-left: 1rem;
+    color: var(--sea-green-crayola);
+
+}

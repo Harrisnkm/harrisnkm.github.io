@@ -1,0 +1,15 @@
+:root {
+    --plum-web: #d68fd6ff;
+    --honeydew: #defff2ff;
+    --davys-grey: #464f51ff;
+    --grey-black: #616161;
+    --sea-green-crayola: #0ff4c6ff;
+}
+
+body {
+
+    padding: 0;
+    margin: 0;
+    font-family: 'Lora', serif;
+}
+
