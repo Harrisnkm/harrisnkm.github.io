@@ -5,10 +5,10 @@
 @import url('https://fonts.googleapis.com/css?family=Lora&display=swap');
 
 /* Globals */
-@import "blog-styles/themes.css";
+@import "styles/themes.css";
 
 /*Style Sheets */
-@import "blog-styles/navbar.css";
-@import "blog-styles/index.css";
-@import "blog-styles/about.css";
-@import "blog-styles/resources.css";
+@import "styles/navbar.css";
+@import "styles/index.css";
+@import "styles/about.css";
+@import "styles/resources.css";
