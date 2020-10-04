@@ -16,7 +16,8 @@ function setActivePage() {
     let urlPath = window.location.href
 
     //get the page from the url
-    let currentPage = urlPath.substring(urlPath.lastIndexOf('/') + 1)
+    let currentPage = urlPath.substring(urlPath.lastIndexOf('/') + 1) || 'index.html'
+
 
     //find the href with this page inside the nav class
     let currentPageLink = document.querySelectorAll("a[href='"+currentPage+"']")[0]
