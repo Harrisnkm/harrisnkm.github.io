@@ -28,7 +28,9 @@
         <input class="form-control" type="search" placeholder="Search" aria-label="Search">
           <button class="btn hit-search-btn px-3 animate__animated animate__bounce" onclick="noSearch(event)" id="hit-search-btn"><i class="fas fa-search"></i></button>
       </form>
-    </nav>  <section class="heroSection">
+    </nav>
+
+      <section class="heroSection">
         <div class="heroView" style="background-image:url('public/assets/images/healthcarebackground.jpg')">
             <h1 class="heroText">Healthcare IT Blog</h1>
         </div>
@@ -41,6 +43,9 @@
 
         </div>
     </section>
+
+
+
 </body>
 
 <script>
@@ -55,13 +60,17 @@
     }
 
     docReady(function(){
-        var blogs = document.getElementById('blogs')
-        blogs.innerHTML = createBlogs(12)
+        //return the name of the page
+        let currentPage = setActivePage()
+        if (currentPage == 'index.html'){
+            //create blog posts
+            var blogs = document.getElementById('blogs')
+            blogs.innerHTML = createBlogs(12)
+        }
+
     })
 
 
 
 </script>
-
-
 </html>
