@@ -28,7 +28,7 @@ pages = [
 def main(pages):
 
 
-
+    #merge content with templates
     def mergeTemplate(baseFile, contentFile, title):
 
 
@@ -40,6 +40,13 @@ def main(pages):
         # replace contents of base file
         return baseFileContent.replace("{{content}}", pageContent).replace("{{title}}", title)
 
+    #returns basename of the file
+    def getBasename(filename):
+        return os.path.basename(filename)
+
+    #notify user of file creation
+    def fileCreateConfirm(filename):
+        print(f'{filename} created successfully!')
 
 
     #loop through list of pages
@@ -47,14 +54,18 @@ def main(pages):
 
 
         #replace contents of base file
-        output_file = mergeTemplate('templates/base.html', page['filename'], page['title'])
+        outputFile = mergeTemplate('templates/base.html', page['filename'], page['title'])
+
+        #get the basename
+        fileBasename = getBasename(page['filename'])
 
         #write to the file
-        f = open(f"docs/{os.path.basename(page['filename'])}", 'w')
-        f.write(output_file)
+        f = open(f"docs/{fileBasename}", 'w')
+        f.write(outputFile)
         f.close()
 
-
+        #notify user of file creation
+        fileCreateConfirm(fileBasename)
 
 
 
