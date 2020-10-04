@@ -49,7 +49,7 @@
     docReady(function(){
         //return the name of the page
         let currentPage = setActivePage()
-        if (currentPage == 'index.html' || ''){
+        if (currentPage != 'about.html' || 'resources.html'){
             //create blog posts
             var blogs = document.getElementById('blogs')
             blogs.innerHTML = createBlogs(12)
