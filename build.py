@@ -1,37 +1,62 @@
 import os
 
-def createPage(filename):
-    if filename == 'index.html':
-        return 'templates/bottom_script.html'
-    else:
-        return 'templates/bottom.html'
+contentDir = 'content'
+docsDir = 'docs'
+
+pages = [
+    {
+        "filename": f"{contentDir}/index.html",
+        "output": f"{docsDir}/index.html",
+        "title": "HIT Blog",
+    },
+    {
+        "filename": f"{contentDir}/about.html",
+        "output": f"{docsDir}/about.html",
+        "title": "HIT Blog | About",
+    },
+    {
+        "filename": f"{contentDir}/resources.html",
+        "output": f"{docsDir}/resources.html",
+        "title": "HIT Blog | Resources",
+    },
+
+]
 
 
 
 
-for filename in os.listdir('content'):
-
-    #initialize page_total
-    page_total = ''
-    #read from top
-    page_total += open('templates/top.html').read()
-    #read from content
-    page_total += open(f'content/{filename}').read()
-    #read from bottom
-    page_total += open(createPage(filename)).read()
-
-    f = open(f'docs/{filename}', 'w')
-    f.write(page_total)
-    f.close()
+def main(pages):
 
 
 
-
-'''
-Loop through the files in the directory
-Compare the file name with a list of strings
-    switch statement     
-'''
+    def mergeTemplate(baseFile, contentFile, title):
 
 
+        baseFileContent = open(baseFile).read()
+
+        # read the page to a variable
+        pageContent = open(contentFile).read()
+
+        # replace contents of base file
+        return baseFileContent.replace("{{content}}", pageContent).replace("{{title}}", title)
+
+
+
+    #loop through list of pages
+    for page in pages:
+
+
+        #replace contents of base file
+        output_file = mergeTemplate('templates/base.html', page['filename'], page['title'])
+
+        #write to the file
+        f = open(f"docs/{os.path.basename(page['filename'])}", 'w')
+        f.write(output_file)
+        f.close()
+
+
+
+
+
+main(pages)
 

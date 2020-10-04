@@ -13,3 +13,11 @@ body {
     font-family: 'Lora', serif;
 }
 
+#activeNavLink:after {
+    content: '';
+    display: block;
+    width: 75%;
+    height: .2rem;
+    background-color: var(--plum-web);
+}
+
